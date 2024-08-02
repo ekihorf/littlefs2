@@ -346,6 +346,12 @@ impl fmt::Display for Path {
     }
 }
 
+impl defmt::Format for Path {
+    fn format(&self, fmt: defmt::Formatter) {
+        defmt::write!(fmt, "{}", self.as_ref())
+    }
+}
+
 impl<'b> TryFrom<&'b [u8]> for &'b Path {
     type Error = Error;
 

@@ -12,7 +12,7 @@ documentation = "https://docs.rs/littlefs2"
 
 [dependencies]
 bitflags = "1"
-delog = "0.1.0"
+defmt = "0.3"
 generic-array = "0.14"
 heapless = "0.7"
 littlefs2-sys = "0.2"
@@ -37,13 +37,6 @@ ll-assertions = ["littlefs2-sys/assertions"]
 # enable trace in backend C code
 ll-trace = ["littlefs2-sys/trace"]
 c-stubs = []
-
-log-all = []
-log-none = []
-log-info = []
-log-debug = []
-log-warn = []
-log-error = []
 
 # TODO: LFS_NAME_MAX (and maybe other sizes) are baked into the
 # compiled C library. For instance, the `lfs_info` struct has a
